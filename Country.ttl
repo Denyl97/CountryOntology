@@ -1,0 +1,214 @@
+@prefix : <https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pla: <https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.ttl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.ttl> .
+
+<https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.ttl> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#borders
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#borders> rdf:type owl:ObjectProperty ,
+                                                                                          owl:SymmetricProperty ;
+                                                                                 rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> ;
+                                                                                 rdfs:range <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isCapitalOf
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isCapitalOf> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:subPropertyOf <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isLocatedIn> .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isInContinent
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isInContinent> rdf:type owl:ObjectProperty ;
+                                                                                       rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> ;
+                                                                                       rdfs:range <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Continent> .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isLocatedIn
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isLocatedIn> rdf:type owl:ObjectProperty ;
+                                                                                     rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#City> ;
+                                                                                     rdfs:range <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isPartOf
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isPartOf> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#State> ;
+                                                                                  rdfs:range <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#wasBornIn
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#wasBornIn> rdf:type owl:ObjectProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Person> ;
+                                                                                   rdfs:range <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#area
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#area> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Place> ;
+                                                                              rdfs:range xsd:integer ;
+                                                                              rdfs:comment "Total area measured in squared kilometers" .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#currency
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#currency> rdf:type owl:DatatypeProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> ;
+                                                                                  rdfs:range xsd:string ;
+                                                                                  rdfs:comment "Code of currency used in each country, e.g., USA Dollar = USD, Colombian Peso = COP, etc." .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#firstName
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#firstName> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Person> ;
+                                                                                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#lastName
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#lastName> rdf:type owl:DatatypeProperty ;
+                                                                                  rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Person> ;
+                                                                                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#placeName
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#placeName> rdf:type owl:DatatypeProperty ;
+                                                                                   rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Place> ;
+                                                                                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#population
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#population> rdf:type owl:DatatypeProperty ;
+                                                                                    rdfs:domain <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Place> ;
+                                                                                    rdfs:range xsd:integer ;
+                                                                                    rdfs:comment "Total population measured in thousands" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#City
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#City> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Place> ;
+                                                                              rdfs:comment "This is the class of all cities" .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Continent
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Continent> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Place> .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Place> .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Person
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Person> rdf:type owl:Class ;
+                                                                                rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Place
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Place> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#President
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#President> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Person> .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#State
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#State> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Place> .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Vice-President
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Vice-President> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Person> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#CapitalVen
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#CapitalVen> rdf:type owl:NamedIndividual ,
+                                                                                             <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#City> ;
+                                                                                    <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isCapitalOf> <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country2Ven> ;
+                                                                                    <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#placeName> "Caracas"^^xsd:string ;
+                                                                                    <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#population> 2082 .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Continent1
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Continent1> rdf:type owl:NamedIndividual ;
+                                                                                    <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#placeName> "America"^^xsd:string ;
+                                                                                    rdfs:comment "America"^^xsd:string .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country0USA
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country0USA> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#borders> <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country1Mex> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isInContinent> <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Continent1> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#currency> "USD"^^xsd:string ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#placeName> "United States of America"^^xsd:string ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#population> 327200 .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country1Mex
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country1Mex> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isInContinent> <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Continent1> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#currency> "MXN"^^xsd:string ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#placeName> "Mexico"^^xsd:string ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#population> 129200 .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country2Ven
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country2Ven> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#borders> <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country3Col> ,
+                                                                                                                                                                      <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country4Brazil> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isInContinent> <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Continent1> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#currency> "VEF"^^xsd:string ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#placeName> "Venezuela"^^xsd:string ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#population> 31980 .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country3Col
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country3Col> rdf:type owl:NamedIndividual ,
+                                                                                              <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#borders> <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country4Brazil> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isInContinent> <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Continent1> ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#currency> "COP"^^xsd:string ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#placeName> "Colombia"^^xsd:string ;
+                                                                                     <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#population> 49070 .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country4Brazil
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country4Brazil> rdf:type owl:NamedIndividual ,
+                                                                                                 <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country> ;
+                                                                                        <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#isInContinent> <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Continent1> ;
+                                                                                        <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#currency> "Brazilian Real"^^xsd:string ;
+                                                                                        <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#placeName> "BRL"^^xsd:string ;
+                                                                                        <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#population> 209300 .
+
+
+###  http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#PresidentVen
+<http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#PresidentVen> rdf:type owl:NamedIndividual ,
+                                                                                               <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#President> ;
+                                                                                      <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#wasBornIn> <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#Country2Ven> ;
+                                                                                      <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#firstName> "Nicolas"^^xsd:string ;
+                                                                                      <http://www.semanticweb.org/denyl/ontologies/2020/2/untitled-ontology-2#lastName> "Maduro"^^xsd:string .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
