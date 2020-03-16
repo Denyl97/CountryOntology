@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#"
+     xml:base="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Country="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#">
+    <owl:Ontology rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#borders -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#borders">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#isCapitalOf -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#isCapitalOf">
+        <rdfs:subPropertyOf rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#isLocatedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#isInContinent -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#isInContinent">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Continent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#isLocatedIn -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#isLocatedIn">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#City"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#isPartOf">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#State"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#wasBornIn -->
+
+    <owl:ObjectProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#wasBornIn">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Person"/>
+        <rdfs:range rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#area -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#area">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total area measured in squared kilometers</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#currency -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#currency">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Code of currency used in each country, e.g., USA Dollar = USD, Colombian Peso = COP, etc.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#firstName -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#firstName">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#lastName -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#lastName">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#placeName -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#placeName">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#population -->
+
+    <owl:DatatypeProperty rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#population">
+        <rdfs:domain rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Total population measured in thousands</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#City -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#City">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Place"/>
+        <rdfs:comment>This is the class of all cities</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Continent -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Continent">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Person -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Place -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Place"/>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#President -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#President">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#State -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#State">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Place"/>
+    </owl:Class>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Vice-President -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Vice-President">
+        <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#CapitalVen -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#CapitalVen">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#City"/>
+        <isCapitalOf rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country2Ven"/>
+        <placeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caracas</placeName>
+        <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2082</population>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Continent1 -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Continent1">
+        <placeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">America</placeName>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">America</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country0USA -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country0USA">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+        <borders rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country1Mex"/>
+        <isInContinent rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Continent1"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</currency>
+        <placeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States of America</placeName>
+        <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">327200</population>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country1Mex -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country1Mex">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+        <isInContinent rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Continent1"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MXN</currency>
+        <placeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico</placeName>
+        <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">129200</population>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country2Ven -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country2Ven">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+        <borders rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country3Col"/>
+        <borders rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country4Brazil"/>
+        <isInContinent rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Continent1"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VEF</currency>
+        <placeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Venezuela</placeName>
+        <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31980</population>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country3Col -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country3Col">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+        <borders rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country4Brazil"/>
+        <isInContinent rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Continent1"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COP</currency>
+        <placeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colombia</placeName>
+        <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49070</population>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country4Brazil -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country4Brazil">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country"/>
+        <isInContinent rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Continent1"/>
+        <currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazilian Real</currency>
+        <placeName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRL</placeName>
+        <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">209300</population>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#PresidentVen -->
+
+    <owl:NamedIndividual rdf:about="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#PresidentVen">
+        <rdf:type rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#President"/>
+        <wasBornIn rdf:resource="https://raw.githubusercontent.com/Denyl97/CountryOntology/master/Country.owl#Country2Ven"/>
+        <firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicolas</firstName>
+        <lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maduro</lastName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
